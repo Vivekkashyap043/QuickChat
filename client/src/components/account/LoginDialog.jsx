@@ -10,7 +10,6 @@ import './login.css';
 
 const Component = styled(Box)`
   align-items:center;
-  position: fixed;
 `
 const Container = styled(Box)`
    padding : 50px 0 50px 50px;
@@ -18,12 +17,11 @@ const Container = styled(Box)`
 `
 
 const Title = styled(Typography)`
-    font-size : 35px;
-    color : #525252;
+    font-size : 20px;
     font-size : 80px; 
     font-weight : 600;
     font-family : inherits;
-    margin-bottom : 25px;
+    margin-bottom : 20px;
     align-items: center;
     color: #191970;
 `
@@ -57,14 +55,14 @@ const LoginDialog =()=>{
     
     return(
 
-        <Dialog id="dialog-back" open = {true} PaperProps={{sx: dialogStyle,style:{background: ' linear-gradient(to bottom, #dd3e54, #6be585)'}}} hideBackdrop={true} >
+        <Dialog id="dialog-back" open = {true} PaperProps={{sx: dialogStyle,style:{background: ' linear-gradient(to bottom, #dd3e54, #6be585)', justifyContent: "center", alignItems: "center"}}} hideBackdrop={true} >
            <Component>
               <Container>
                  <Title>Welcome to QuickAll</Title>
                   
              
                     <div className='StyleComponent'>
-                      <img src={QuickChatPic} alt="logo"/>
+                      <img src={QuickChatPic} alt="logo" style={{width: "40%", height: "40%"}}/>
                      
                       <div className='centerContent'>
                          <Button color="primary"> 
